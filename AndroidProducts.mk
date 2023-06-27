@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_phoenix.mk
+    $(LOCAL_DIR)/blaze_phoenix.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_phoenix-user \
-    evolution_phoenix-userdebug \
-    evolution_phoenix-eng
+    blaze_phoenix-user \
+    blaze_phoenix-userdebug \
+    blaze_phoenix-eng
