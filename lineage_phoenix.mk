@@ -12,20 +12,26 @@ $(call inherit-product, device/xiaomi/phoenix/device.mk)
 # Camera
 $(call inherit-product-if-exists, device/xiaomi/phoenix-miuicamera/config.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common AlphaDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Evolution X Build Type & Maintainer stuff.
-EVO_BUILD_TYPE := Unofficial
+# AlphaDroid Build Type & Maintainer stuff.
+ALPHA_MAINTAINER := JAYMISTRY258
+ALPHA_BUILD_TYPE := UNOFFICIAL
+
+# SOC
+PROCESSOR_MODEL := SM6150
 
 # Gapps Build Details.
-TARGET_USES_MINNI_GAPPS := true
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 
 # Custom stuff.
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BUILD_APERTURE_CAMERA := false
-TARGET_USE_PIXEL_FINGERPRINT := true
-TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_USE_PIXEL_FINGERPRINT := false
+TARGET_INCLUDE_PIXEL_CHARGER := false
+TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := true
 
@@ -37,14 +43,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Build Fingerprint.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="raven-user 13 TP1A.221005.002/9012097 release-keys"
-
-BUILD_FINGERPRINT := google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_phoenix
+PRODUCT_NAME := lineage_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X2
