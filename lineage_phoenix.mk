@@ -12,19 +12,21 @@ $(call inherit-product, device/xiaomi/phoenix/device.mk)
 # Camera
 $(call inherit-product-if-exists, device/xiaomi/phoenix-miuicamera/config.mk)
 
-# Inherit some common Project-Blaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common Rising OS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Project-Blaze Build Type & Maintainer stuff.
-BLAZE_BUILD_TYPE := UNOFFICIAL
-BLAZE_MAINTAINER := JAYMISTRY258
+RISING_OFFICIAL := UNOFFICIAL
+RISING_MAINTAINER := JAYMISTRY258
 
 # SOC
 PROCESSOR_MODEL := SM6150
 
 # Gapps Build Details.
-WITH_GAPPS := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
 TARGET_GAPPS_ARCH := arm64
+TARGET_CORE_GMS_EXTRAS := true
 TARGET_INCLUDE_NGA := true
 
 # Custom stuff.
@@ -50,7 +52,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 #BUILD_FINGERPRINT := google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_phoenix
+PRODUCT_NAME := lineage_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X2
