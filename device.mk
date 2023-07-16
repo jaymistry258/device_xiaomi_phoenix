@@ -46,21 +46,11 @@ PRODUCT_PACKAGES += \
     audio.primary.sm6150:32 \
     audio.r_submix.default \
     audio.usb.default \
-    liba2dpoffload \
     libaudio-resampler \
-    libbatterylistener \
-    libcirrusspkrprot \
-    libcomprcapture \
-    libexthwplugin \
-    libhdmiedid \
-    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndmonitor \
-    libspkrprot \
     libtinycompress \
-    libtinycompress.vendor \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
@@ -136,12 +126,6 @@ PRODUCT_PACKAGES += \
     libpiex_shim \
     libwatermark_shim
 
-# CNE
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
-
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -161,7 +145,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
-    libdisplayconfig \
     libtinyxml \
     libvulkan \
     memtrack.sm6150 \
@@ -235,11 +218,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    libbatching \
-    libgeofencing \
-    libgnss
+    android.hardware.gnss@2.1-service-qti
 
 # Health
 PRODUCT_PACKAGES += \
@@ -260,7 +239,6 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
     init.qcom.rc
 
 # IPC router config
@@ -459,7 +437,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -554,7 +531,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     android.hardware.wifi.supplicant \
     android.hardware.wifi.hostapd \
-    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
@@ -568,11 +544,9 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libdisplayconfig.qti \
-    libdisplayconfig.vendor \
     libminijail \
     libnl \
     libqdMetaData \
     libqdMetaData.system \
-    libqdMetaData.vendor \
     libwfdaac_vendor \
     vendor.display.config@2.0
