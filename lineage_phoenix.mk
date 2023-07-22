@@ -17,7 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # AlphaDroid Build Type & Maintainer stuff.
 ALPHA_MAINTAINER := JAYMISTRY258
-ALPHA_BUILD_TYPE := UNOFFICIAL
+ALPHA_BUILD_TYPE := OFFICIAL
 
 # SOC
 PROCESSOR_MODEL := SM6150
