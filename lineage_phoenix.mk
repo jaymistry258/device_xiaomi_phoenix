@@ -9,9 +9,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
-# Camera
-$(call inherit-product-if-exists, device/xiaomi/phoenix-miuicamera/config.mk)
-
 # Inherit some common RisingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -29,7 +26,7 @@ TARGET_GAPPS_ARCH := arm64
 # Custom stuff.
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_USE_PIXEL_FINGERPRINT := false
 TARGET_INCLUDE_PIXEL_CHARGER := false
 TARGET_USE_GOOGLE_TELEPHONY := true
