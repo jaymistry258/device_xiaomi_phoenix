@@ -12,12 +12,12 @@ $(call inherit-product, device/xiaomi/phoenix/device.mk)
 # Camera
 $(call inherit-product-if-exists, device/xiaomi/phoenix-miuicamera/config.mk)
 
-# Inherit some common AlphaDroid stuff.
+# Inherit some common RisingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# AlphaDroid Build Type & Maintainer stuff.
-ALPHA_MAINTAINER := JAYMISTRY258
-ALPHA_BUILD_TYPE := OFFICIAL
+# RisingOS Build Type & Maintainer stuff.
+RISING_MAINTAINER := JAYMISTRY258
+RISING_OFFICIAL := UNOFFICIAL
 
 # SOC
 PROCESSOR_MODEL := SM6150
